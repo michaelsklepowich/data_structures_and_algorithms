@@ -23,8 +23,11 @@ class LinkedList(object):
     #     pass
 
     def insert(self, val: Any) -> Node:
+        """
+        this method creates a new node and appends to the front of the list
+        """
         if self._length == 0:
-            self.head = Node(val, self)
+            self.head = Node(val, self.head)
             self._length += 1
             print(self.head._next)
             return self
@@ -37,13 +40,15 @@ class LinkedList(object):
 
     # def includes(self, val: str, data: int) -> bool:
     def includes(self, val: Any) -> bool:
-        counter = 0
-        test = self._length
-        while counter < test:
-            if self.head.val == val:
-                print(self.head.val, val, 'hitting true')
-                return True
-            print(self.head._next, 'hitting')    
-            self = self.head._next
-            counter += 1
+        """
+        this method checks to see if any value exists within a node and returns a boolean
+        """
+        print('head:', self.head)
+        current = self.head
+        while current is not None:
+            if current.val == val:
+                print(current.val, val, 'hitting true')
+                return True 
+            current = current._next
+        print(self)    
         return False       
