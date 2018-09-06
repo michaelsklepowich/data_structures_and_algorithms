@@ -40,29 +40,3 @@ def find_max_value(binary_tree):
         _walk(root_node)   
         return 'largest value ' + largest_value
 
-
-            
-
-#   // recursive function
-#   function _walk(arr) {
-#     let newNodes = [];
-#     for (var i = 0; i < arr.length; i++) {
-#         if (arr[i].value) {
-#           console.log('new value: ', arr[i].value)
-#           //ordering logic
-#           output.push(arr[i].value);
-#           //arr[i].children for k-ary trees
-#           newNodes.push(arr[i].left);
-#           newNodes.push(arr[i].right);
-#         }
-#     }
-#     //conditional recursion
-#     console.log('newNodes:', newNodes.length, '\n', newNodes)
-#     if(newNodes.every(isNull) === false) {
-#     _walk(newNodes);
-#     }
-#   }
-#   //calling the recursive function
-#   _walk(rootNode);
-#   return 'the output ' + output;
-# }
